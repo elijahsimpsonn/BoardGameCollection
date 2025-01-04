@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';  
 import axios from 'axios';  
 
-const boardGameIds = [47, 100901, 175914, 147949, 180956, 221965, 188834, 356768, 54043, 10547, 274364, 230802, 193037, 229741, 234691, 115746, 170216, 266192, 34119, 13, 237182, 256960, 332686, 297562, 155821, 342942, 224783, 162886, 167791, 224517, 167355, 55690]; // Replace with your actual board game IDs  
+import gameids from './data/gameids';
 
 const fetchBoardGameData = async (id: number) => {  
    const response = await axios.get(`https://boardgamegeek.com/xmlapi2/thing?id=${id}`);  
@@ -81,7 +81,7 @@ const App = () => {
 
    useEffect(() => {  
        const filterGames = async () => {  
-           const games = await Promise.all(boardGameIds.map(id => fetchBoardGameData(id)));  
+           const games = await Promise.all(gameids.map(id => fetchBoardGameData(id)));  
            const filtered = games.filter(game => {  
                return (  
                    (minPlayers === null || game.minplayers >= minPlayers) &&  
