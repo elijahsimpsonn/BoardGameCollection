@@ -1,0 +1,11 @@
+.game-container {
+    border: 3px solid red;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.main-info {
+    flex:content;
+}

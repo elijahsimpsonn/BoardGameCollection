@@ -1,36 +1,12 @@
 import React, { useEffect, useState } from 'react';  
-import axios from 'axios';  
 
 import fetchBoardGameData from './apiFunctions/fetchBoardGameData'; 
 
+import BoardGame from './components/Game/BoardGame';
+
 import gameids from './data/gameids';
 
-const BoardGame = ({ id }: { id: number }) => {  
-   const [gameData, setGameData] = useState<any>(null);  
-
-   useEffect(() => {  
-       const getData = async () => {  
-           const data = await fetchBoardGameData(id);  
-           setGameData(data);  
-       };  
-       getData();  
-   }, [id]);  
-
-   if (!gameData) return <div>Loading...</div>;  
-
-   return (  
-       <div>  
-           <img src={gameData.thumbnail} alt={gameData.name} />  
-           <h2>{gameData.name}</h2>  
-           <p>Year Published: {gameData.yearPublished}</p>  
-           <p>{gameData.description}</p>  
-           <p>Minimum Players: {gameData.minplayers}</p>  
-           <p>Maximum Players: {gameData.maxplayers}</p>  
-           <p>Avg Playing Time: {gameData.playingtime}</p>  
-           {/* Add more fields as needed */}  
-       </div>  
-   );  
-};  
+import "./App.css"
 
 const App = () => {  
    const [minPlayers, setMinPlayers] = useState<number | null>(null);  
@@ -87,8 +63,8 @@ const App = () => {
 
    return (  
        <div>  
-           <h1>Elijah Game Library</h1>  
-           <div>  
+           <h1>Elijah Game Library</h1>
+           <div className="main-content">  
                <label>  
                    Min Players:  
                    <select value={minPlayers || ''} onChange={handleMinPlayersChange}>
