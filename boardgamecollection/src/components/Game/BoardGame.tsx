@@ -30,7 +30,12 @@ const BoardGame = ({ id }: { id: number }) => {
                 </div>
             </div>
             <div className="desc">
-                <p>{gameData.description}</p>
+                <p>{gameData.description.split('&#10;').map((line: string, index: number) => (
+                    <React.Fragment key={index}>
+                        {line}
+                        <br />
+                    </React.Fragment>
+                ))}</p>
             </div>
         </div>
     )
