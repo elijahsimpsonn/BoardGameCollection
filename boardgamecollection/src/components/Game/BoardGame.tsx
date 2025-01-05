@@ -25,7 +25,7 @@ const BoardGame = ({ id }: { id: number }) => {
                 </div>
                 <div className="info-container">
                     <h2 className="game-title">{gameData.name}</h2>
-                    <p>Player Count: {gameData.minplayers} - {gameData.maxplayers}</p>
+                    <p>Player Count: {gameData.minplayers === gameData.maxplayers ? gameData.minplayers : `${gameData.minplayers} - ${gameData.maxplayers}`}</p>
                     <p>Avg Playing Time: {gameData.playingtime}</p>
                 </div>
             </div>
