@@ -8,6 +8,15 @@ import gameids from './data/gameids';
 
 import "./App.css"
 
+
+//TODO BEFORE MVP RELEASE:
+// 1. Always sort games by name in alaphabetical order
+// 2. Only show one value for play count is min and max are the same
+// 3. Remove lower bound for max players if min players is set
+// 4. Style the filters
+// 5. Add testing
+// 6. Update README
+
 const App = () => {  
    const [minPlayers, setMinPlayers] = useState<number | null>(null);  
    const [maxPlayers, setMaxPlayers] = useState<number | null>(null);  
