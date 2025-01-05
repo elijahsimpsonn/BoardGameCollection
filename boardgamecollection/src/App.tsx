@@ -11,7 +11,7 @@ import "./App.css"
 
 //TODO BEFORE MVP RELEASE:
 // 3. Remove lower bound for max players if min players is set
-// 4. Style the filters
+// 4. Add other XML text formatting condtions in the game componet
 // 5. Add testing
 // 6. Update README
 
