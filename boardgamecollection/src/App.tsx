@@ -64,8 +64,6 @@ const App = () => {
                );  
            });  
            setFilteredBoardGames(filtered);  
-           setMinPlayerOptions([...new Set(games.map(game => game.minplayers))].sort((a, b) => a - b));
-           setMaxPlayerOptions([...new Set(games.map(game => game.maxplayers))].sort((a, b) => a - b));
        };  
        filterGames();  
    }, [minPlayers, maxPlayers, playingTime]);  
@@ -103,9 +101,11 @@ const App = () => {
                </label>  
                <button onClick={handleResetFilters}>Reset Filters</button>
            </div>  
-           {filteredBoardGames.map(game => (  
-               <BoardGame key={game.id} id={game.id} />  
-           ))}  
+           {filteredBoardGames
+               .sort((a, b) => a.name.localeCompare(b.name))
+               .map(game => (  
+                   <BoardGame key={game.id} id={game.id} />  
+               ))}  
        </div>  
    );  
 };  
