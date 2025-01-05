@@ -9,9 +9,8 @@ import gameids from './data/gameids';
 import "./App.css"
 
 
-//TODO BEFORE MVP RELEASE:
+//TODO LATER:
 // 3. Remove lower bound for max players if min players is set
-// 4. Add other XML text formatting condtions in the game componet
 // 5. Add testing
 // 6. Update README
 
