@@ -20,13 +20,14 @@ const BoardGame = ({ id }: { id: number }) => {
     return (
         <div className="game-container">
             <div className="main-info">
-                <img className="thumbnail" src={gameData.thumbnail} alt={gameData.name} />
-                <h2 className="game-title">{gameData.name}</h2>
-            </div>
-            <div className="sub-info">
-                <p>Minimum Players: {gameData.minplayers}</p>
-                <p>Maximum Players: {gameData.maxplayers}</p>
-                <p>Avg Playing Time: {gameData.playingtime}</p>
+                <div className="image-container">
+                    <img className="thumbnail" src={gameData.thumbnail} alt={gameData.name} />
+                </div>
+                <div className="info-container">
+                    <h2 className="game-title">{gameData.name}</h2>
+                    <p>Player Count: {gameData.minplayers} - {gameData.maxplayers}</p>
+                    <p>Avg Playing Time: {gameData.playingtime}</p>
+                </div>
             </div>
             <div className="desc">
                 <p>{gameData.description}</p>

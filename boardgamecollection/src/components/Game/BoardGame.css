@@ -1,11 +1,17 @@
 .game-container {
-    border: 3px solid red;
+    background-color: #323032;
     width: 75%;
     margin: auto;
+    margin-top: 15px;
     padding: 10px;
-    display: flex;
+    border-radius: 12px;
 }
 
 .main-info {
-    flex:content;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container {
+    padding: 20px;
 }
