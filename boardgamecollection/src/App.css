@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+.selection {
+    width: 15%;
+    margin: 1%;
+}
+
+.selection-label {
+    padding: 0.5em;
+}
+
+.button {
+    padding: 0.5em;
+    background-color: #646cff;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin: 1em;
+}
